@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0 7rem;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background-color: rgb(255, 255, 255);
+            z-index: 5;
+            width: 108%;
+            margin: 0;
+            padding: 0;
+            height: 150px;
+        }
+
+        .fixed {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 0;
+
+        }
+
+        .LogoIMAGE {
+            display: flex;
+        }
+
+        img {
+            margin: 0px;
+            padding: 10px;
+        }
+
+        .content1 {
+            padding-right: 100px;
+            padding: 30px;
+        }
+
+        .content1 ul {
+            list-style-type: none;
+        }
+
+        .content1 li {
+            float: left;
+        }
+
+        .Content2 ul {
+            list-style-type: none;
+        }
+
+        .Content2 {
+            background-color: red;
+            color: white;
+            padding-right: 200px;
+            padding: 10px 30px;
+            align-items: baseline;
+        }
+
+        .Content2 a {
+            color: white;
+        }
+
+        .Content2 ul li {
+            float: left;
+            display: flex;
+            padding-left: 20px;
+        }
+
+        .contents {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(160, 153, 153);
+            padding: 2px;
+        }
+
+        .flex-container a {
+            color: white;
+            position: relative;
+            right: 130px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgba(109, 11, 11, 0.949)
+        }
+
+        .flex-container {
+            position: relative;
+            bottom: 30px;
+        }
+
+        .bikeimage {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .box {
+            flex: 1;
+            padding: 10px;
+            transition: 1s;
+        }
+
+        .box img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 15px;
+        }
+
+        .box:hover {
+            z-index: 2;
+            box-shadow: 1px 2px 3px 5px grey;
+        }
+
+        h2 {
+            text-align: left;
+            color: red;
+        }
+
+        .container2 {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .clip {
+            flex: 1;
+            padding: 10px;
+            transition: 1s;
+        }
+
+        .clip:hover {
+            z-index: 2;
+            box-shadow: 1px 2px 3px 5px grey;
+        }
+
+        .clip p {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 15px;
+        }
+
+        .clip video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+      
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            background-color: #4b4b4b;
+            padding: 10px;
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            background-color: #595959;
+            padding: 15px;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            width: 200px;
+            justify-content: space-between;
+        }
+
+        .button:hover {
+            background-color: #6c6c6c;
+        }
+
+        .button-text {
+            flex-grow: 1;
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        .button-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border: 2px solid white;
+            border-radius: 50%;
+        }
+
+        .button-arrow:before {
+            content: ">";
+            color: white;
+            font-size: 18px;
+        }
+
+        .no-wrap {
+            white-space: nowrap;
+        }
+
+        .footer {
+            background-color: red;
+            color: azure;
+            height: 60px;
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 5px;
+        }
+
+        .final {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        @media only screen and (max-width: 1200px) {
+            body {
+                margin: 0 5rem;
+            }
+
+            .content1 {
+                padding-right: 50px;
+            }
+
+            .Content2 {
+                padding-right: 100px;
+            }
+        }
+
+        @media only screen and (max-width: 992px) {
+           
+
+            .content1,
+            .Content2 {
+                padding-right: 0;
+                padding: 10px;
+            }
+
+            .content1 ul,
+            .Content2 ul {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                font-size: 10px;
+            }
+
+            .content1 li,
+            .Content2 ul li {
+                float: none;
+                padding: 5px 0;
+            }
+
+           
+        }
+
+        @media only screen and(max-width: 768px) {
+             header {
+                height: auto;
+                padding: 10px;
+            }
+
+             .fixed {
+                width: 100%;
+            } 
+
+            .bikeimage img {
+                height: auto;
+            }
+
+            .container,
+            .container2 {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .box,
+            .clip {
+                width: 100%;
+            }
+
+            .button-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .button {
+                width: 90%;
+                margin: 5px 0;
+            }
+        }
+
+        @media only screen and (max-width: 576px) {
+            body {
+                margin: 0 1rem;
+            }
+
+          
+
+            .footer {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .final {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .final a {
+                padding: 5px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="fixed">
+            <div class="LogoIMAGE">
+                <img src="./hondaimages/logodownload.png" alt="" width="100px" height="100px">
+            </div>
+
+            <div class="contents">
+                <div class="content1">
+                    <ul>
+                        <li><a href="">Home|</a></li>
+                        <li><a href="./mediacenter.html">Media Center|</a></li>
+                        <li><a href="">Safety India|</a></li>
+                        <li><a href="">Best Deal|</a></li>
+                        <li><a href="">Joy Club|</a></li>
+                        <li><a href="">CSR |</a></li>
+                        <li><a href="">Racing|</a></li>
+                        <li><a href="">Reach Us|</a></li>
+                        <li><a href="">FaQ |</a></li>
+                    </ul>
+                </div>
+
+                <div class="Content2">
+                    <ul>
+                        <li><a href="">Motorcycle</a></li>
+                        <li><a href="">Scooter</a></li>
+                        <li><a href="">Big Bikes</a></li>
+                        <li><a href="">Accessories</a></li>
+                        <li><a href="">Dealer Network</a></li>
+                        <li><a href="">Product/Bulk Enquiry</a></li>
+                        <li><a href="">Service</a></li>
+                        <li><a href="">Book Now</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+   
+    </header>
+
+    <div class="bikeimage">
+        <img src="./hondaimages/unicorn_home_banner.webp" alt="" width="100%" height="500px">
+    </div>
+    <div class="container">
+        <div class="box">
+            <h2>Special Offer</h2>
+            <img src="./hondaimages/OIP (1).jpg" alt="Description of the image">
+        </div>
+        <div class="box">
+            <h2>New Launch</h2>
+            <img src="./hondaimages/download.jpg" alt="Description of the image">
+        </div>
+        <div class="box">
+            <h2>Special Offer</h2>
+            <img src="./hondaimages/OIP (2).jpg" alt="Description of the image">
+        </div>
+    </div>
+    <div class="container2">
+        <div class="clip">
+            <h2>News</h2>
+            <p> <b>Honda Motorcycle & Scooter India achieves historic 6 crore domestic sales milestone</b> <br>
+                <u>Gurugram, March 28, 2024</u> <br> <br>
+                <b>Honda Motorcycle & Scooter India Revolutionizes Customer Experience</b> <br>
+                <u>Gurugram, March 21, 2024</u> <br><br>
+                <b>TOP 15 finish for IDEMITSU Honda Racing India’s Kavin Quintal in Race 2 of Round 1 of 2024 Asia Road
+                    Racing Championship </b> <br>
+                <u>Thailand, March 17, 2024</u> <br><br>
+                <b>Mohsin Paramban win points for IDEMITSU Honda Racing India team in the inaugural race of 2024 Asia Road
+                    Racing Championship </b><br>
+                <u>Thailand, March 16, 2024,</u> <br><br>
+                <b>Honda Motorcycle and Scooter India announces its lineup for 2024 International Racing Championships
+                </b><br>
+                <u>Gurugram, March 11, 2024 </u><br><br>
+                <b>Honda India Foundation (HIF) launches “Project Buniyaad-Aathmanirbharta Ka Aadhar”</b><br>
+                <u>Imphal, February 12, 2024</u> <br><br>
+            </p>
+        </div>
+        <div class="clip">
+            <h2>videos</h2>
+            <video autoplay loop muted>
+                <source src="./hondaimages/Honda Shine 100 _ 90 Seconds.mp4">
+            </video>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <a href="#" class="button">
+            <div class="button-text">Dealer Locator</div>
+            <div class="button-arrow"></div>
+        </a>
+        <a href="#" class="button">
+            <div class="button-text">FAQ</div>
+            <div class="button-arrow"></div>
+        </a>
+    </div>
+
+    <div class="footer">
+        <div>
+            <p><button> <b>Public Notify </b></button> Beawre of Fradulant Recuirement| Recall Campine</p>
+        </div>
+    </div>
+    <div class="final">
+        <a href="">Sitemap |</a>
+        <a href="">Reach us |</a>
+        <a href="">Disclaimer |</a>
+        <a href="">Privacy Policy |</a>
+    </div>
+
+</body>
+
+</html>
