@@ -63,7 +63,7 @@
 
         .Content2 ul li {
             float: left;
-            display: block;
+            display: flex;
             padding-left: 20px;
         }
 
@@ -162,75 +162,53 @@
             align-items: flex-start;
         }
 
-        @media only screen and(max-width: 1200px) {
-            .icons {
-                left: 1300px;
+        @media only screen and (max-width: 1200px) {
+            body {
+                margin: 0 5rem;
             }
 
-            .Content2 {
-                padding-right: 400px;
-            }
-
-            .flex-container a {
-                font-size: 18px;
-            }
-        }
-
-        @media only screen and (max-width: 992px) {
-            .icons {
-                left: 1100px;
-            }
-
-            .Content2 {
-                padding-right: 300px;
-            }
-
-            .flex-container a {
-                font-size: 16px;
-            }
-        }
-
-        @media only screen and(max-width: 768px) {
-            .icons {
-                left: 900px;
-            }
-
-            .Content2 {
-                padding-right: 200px;
-            }
-
-            .flex-container a {
-                font-size: 14px;
-            }
-        }
-
-        @media only screen and(max-width: 576px) {
-            .icons {
-                left: 700px;
+            .content1 {
+                padding-right: 50px;
             }
 
             .Content2 {
                 padding-right: 100px;
             }
+            #img1 {
+                max-width: 90%;
+            }
+        }
 
-            .flex-container a {
-                font-size: 12px;
+        @media only screen and (max-width: 992px) {
+           
+
+            .content1,
+            .Content2 {
+                padding-right: 0;
+                padding: 10px;
             }
 
-            .fixed {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .content1 ul, .Content2 ul {
+            .content1 ul,
+            .Content2 ul {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 font-size: 10px;
             }
 
-        
+            .content1 li,
+            .Content2 ul li {
+                float: none;
+                padding: 5px 0;
+            }
 
+            #img1 {
+                max-width: 65%;
+            }
+
+           
+        }
+       
             #news {
                 width: 100%;
             }
@@ -241,7 +219,7 @@
                 top: 10px;
                 left: 30px;
             }
-        }
+        
     </style>
 </head>
 <body>
